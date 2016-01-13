@@ -1,0 +1,7 @@
+## Title: ESOQuestLevel
+## APIVersion: 100013
+## Description: Displays quest level on NPC dialog
+## Version: 1.0.0
+## Author: Robert Woods
+
+ESOQuestLEvel.lua
