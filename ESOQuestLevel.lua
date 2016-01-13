@@ -7,7 +7,13 @@ local names = require("QuestNames")
 
 -- Function to init addon
 function ESOQuestLevel:Initialize()
-      EVENT_MANAGER:RegisterForEvent(ESOQuestLevel.name, EVENT_QUEST_OFFERED, --[[ESOQuestLevel.FindQuestLevel(TODO: Find a way to work out the name of the quest the NPC is trying to give you)]] ESOQuestLevel.Yo)
+      EVENT_MANAGER:RegisterForEvent(ESOQuestLevel.name, EVENT_QUEST_OFFERED,
+        function(event)
+          local dialogue, response = GetOfferedQuestInfo()
+          d("Dialogue: "..dialogue)
+          d("Response: "..response)
+        end
+      )
 end
 
 -- Event handler function for EVENT_ADD_ON_LOADED
@@ -16,7 +22,6 @@ function ESOQuestLevel.OnAddOnLoaded(event, addonName)
         ESOQuestLevel:Initialize()
     end
 end
-
 
 --[[function ESOQuestLevel.Display(level)
   TODO: Add code to display level
