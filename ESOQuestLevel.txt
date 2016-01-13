@@ -4,4 +4,5 @@
 ## Version: 1.0.0
 ## Author: Robert Woods
 
-ESOQuestLEvel.lua
+ESOQuestLevel.lua
+QuestNames.lua
